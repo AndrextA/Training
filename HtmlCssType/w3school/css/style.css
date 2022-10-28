@@ -17,11 +17,13 @@ body::-webkit-scrollbar-thumb{
     background-color: orange;
     border-radius: 10px;
 }
+
+p {
+    overflow: auto;
+}
+
+
 footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: gray;
     height: auto;
     width: 100vw;
