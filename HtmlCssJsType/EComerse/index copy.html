@@ -22,10 +22,22 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Specter</a>
-      <div class="form-check form-switch me-auto mt-1 me-1">
+      
+
+
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav ms-auto">
+					<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<a class="nav-link" href="#">About Us</a>
+					<a class="nav-link" href="#">Houses</a>
+					<a class="nav-link disabled">Disabled</a>
+				</div>
+			</div>
+	
+      <div class="form-check form-switch ms-auto mt-3 me-3">
         <label class="form-check-label ms-3" for="lightSwitch">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,18 +54,7 @@
         </label>
         <input class="form-check-input" type="checkbox" id="lightSwitch" />
       </div>
-
-
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav ms-auto">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
-					<a class="nav-link" href="#">About Us</a>
-					<a class="nav-link" href="#">Houses</a>
-					<a class="nav-link disabled">Disabled</a>
-				</div>
-			</div>
-	 
-    <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">≡</span>
     </button>
 		</div>
@@ -329,7 +330,6 @@
 	type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
 	></script>
-  <script src="/assets/scripts/switch.js"></script>
 
 </body>
 </html>
