@@ -27,3 +27,11 @@
 .contact-img {
     width: 100%;
 }
+
+.img-rounder{
+    border-radius:10%;
+}
+
+.img-blog-img {
+    width: 90%;
+}
