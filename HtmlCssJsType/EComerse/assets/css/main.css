@@ -26,6 +26,11 @@
 
 .contact-img {
     width: 100%;
+    border-radius: 5%;
+}
+
+.card i {
+    width: 80px;
 }
 
 .img-rounder{
@@ -34,4 +39,105 @@
 
 .img-blog-img {
     width: 90%;
+}
+
+.container{
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.card {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #332D2D;
+    color: white;
+    transition: transform 0.2s linear;
+
+}
+
+.dark .form-label {
+    color : white;
+}
+
+.dark .pagination {
+    color: white;
+}
+
+i span{
+    color: #324552;
+}
+
+.dark span {
+    color: #FEEFE3;
+}
+
+.dark .card {
+    background-color: #252121;
+    color: white;
+}
+
+.dark .page-link {
+    color: white;
+}
+
+.dark .fa-bed {
+    color: whitesmoke;
+}
+
+.dark .fa-toilet {
+    color: whitesmoke;
+}
+
+.dark .fa-car {
+    color: whitesmoke;
+}
+
+.toggle-theme {
+    background-color: #332D2D;
+    height: 2rem;
+    width: 2rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.toggle-theme:hover,
+.toggle-theme:focus{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.toggle-theme i {
+    font-size: 1.2rem;
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease; color: 0.5s ease;
+}
+
+.fa-moon {
+    color: #9FA6B2;
+    transform: translate(0px);
+}
+
+.fa-sun {
+    color: #9FA6B2;
+    opacity: 0;
+    transform: translate(50px);
+}
+
+.checkbox {
+    display: none;
+}
+.checkbox:checked ~ .toggle-theme .fa-sun{
+    opacity: 1;
+    transform: translate(0px);
+}
+.checkbox:checked ~ .toggle-theme .fa-moon{
+    opacity: 0;
+    transform: translate(-50px);
 }
