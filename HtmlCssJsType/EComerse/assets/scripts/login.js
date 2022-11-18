@@ -1,46 +1,31 @@
-class Login {
-    constructor(form, fields) {
-        this.form = form;
-        this.fields = fields;
-        this.validateonSubmit();
+const userNames = document.getElementById('userName');
+const pass = document.getElementById('password');
+const frmLogin = document.getElementById('frm-register');
+
+frmLogin.addEventListener('submit', LoginUser);
 
 
+function LoginUser (event) {
+
+    event.preventDefault();
+    const getLocal = localStorage.getItem("user");
+    const validateUser = JSON.parse(getLocal);
+
+    if (userName.value === "" || password.value === ""){
+        alert("Please fill in the blanks");
     }
 
-
-
-    validateonSubmit() {
-        let self = this;
-
-        this.form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            self.fields.forEach((field) => {
-                const input = document.querySelector('#${field}');
-                if(self.validateFields(input) == false) {
-                    error++;
-                }
-                if(error == 0) {
-                    console.log("success");
-                }
-            });
-        });
+    else if (!validateUser.find(user => user.user === userName.value)){
+        alert("The user does not exist");
     }
 
-    validateFields(field) {
-        if(field.value.trim() == "") {
-            this.setStatus(
-                field,
-                `${field.previousElementSibiling.innerText} cannot be blank`,
-                "error"
-            );
-            return false;
-        }
-
+    else if (validateUser.find(user => user.user === userName.value).pass !== pass.value){
+        alert("Wrong password");
     }
-}
 
-const form = document.querySelector(".login-form");
-if (form) {
-    const fields = ["username", "password", "email"]
-    const form = validator = new Login(form, fields);
+    else {
+        alert("User logged in");
+
+        window.location.href ="../pages/index.html";
+    }
 }
