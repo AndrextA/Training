@@ -5,7 +5,7 @@ function signIn() {
 
     if (user == 'admin@test.com' && pass == 'AdminTest1*') {
         window.location.href = '/assets/pages/adminDashboard.html';
-        localStorage.user = 'admin';
+        localStorage.userName = user;
     } else {
         alert('Please enter a valid login')
     }
